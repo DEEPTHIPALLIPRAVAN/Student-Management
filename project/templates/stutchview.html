@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view teacher</title>
+</head>
+<body>
+    <table border="2" style="width: 100%;">
+        <tr>
+            <th>Teacher ID</th>
+            <th>NAME</th>
+            <th>PH_NO</th>
+            <th>DEPARTMENT</th>
+            <th>EXPERIENCE</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            
+            <td>{{i.id}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Phone_Number}}</td>
+            <td>{{i.Department}}</td>
+            <td>{{i.Experience}}</td>
+           
+        </tr>
+        {% endfor %}
+
+    
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view teacher</title>
+</head>
+<body>
+    <table border="2" style="width: 100%;">
+        <tr>
+            <th>Student ID</th>
+            <th>NAME</th>
+            <th>DOB</th>
+            <th>MOBILE NO.</th>
+            <th>GENDER</th>
+            
+        </tr>
+        {% for j in data %}
+        <tr>
+            
+            <td>{{j.id}}</td>
+            <td>{{j.Name}}</td>
+            <td>{{j.DOB}}</td>
+            <td>{{j.MobileNumber}}</td>
+            <td>{{j.Gender}}</td>
+            <td><a href="sdelete/{{j.S_id.id}}">DELETE</a></td>
+            <td><a href="sedit/{{j.id}}">EDIT</a></td>
+
+        </tr>
+        {% endfor %}
+
+    
+    
+    </table>
+</body>
+</html>

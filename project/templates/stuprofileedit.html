@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editteacher</title>
+</head>
+<body>
+    <form action="/profupdate" method="post">
+        {% csrf_token %}
+                     
+      
+             
+        NAME:<input type="text" name="name" value="{{stud.Name}}" readonly><br><br>
+        DOB:<input type="date" name="dob" value="{{stud.DOB|date:'Y-m-d'}}"><br><br>
+        MobileNumber:<input type="number" name="mobilenumber" value="{{stud.MobileNumber}}"><br><br>
+        Gender:<input type="text" name="gender" value="{{stud.Gender}}"><br><br>
+        S_id:<input type="text" name="S_id" value="{{stud.S_id}}" style="display: none;"><br><br>
+        username:<input type="text" name="username" value="{{use.username}}"><br><br>
+
+        <input type="submit" value="update profile">
+        
+            
+  
+    </form>
+</body>
+</html>

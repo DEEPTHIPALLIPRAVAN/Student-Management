@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editteacher</title>
+</head>
+<body>
+    <form action="/updatet/{{text.T_id.id}}" method="post">
+        {% csrf_token %}
+         
+         
+        NAME:<input type="text" name="Name" value="{{text.Name}}" ><br><br>
+        Phone_Number:<input type="number" name="ph_no" value="{{text.Phone_Number}}"><br><br>
+        Department:<input type="text" name="dept" value="{{text.Department}}"><br><br>
+        Experience:<input type="text" name="exp" value="{{text.Experience}}"><br><br>
+        username:<input type="text" name="username" value="{{T_id.username}}"><br><br>
+        <input type="submit" value="update">
+        
+            
+  
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editteacher</title>
+</head>
+<body>
+    <form action="/supdate/{{data.S_id.id}}" method="post">
+        {% csrf_token %}
+         
+         
+        NAME:<input type="text" name="Name" value="{{data.Name}}" ><br><br>
+        DOB:<input type="date" name="DOB" value="{{data.DOB|date:'Y-m-d'}}"><br><br>
+        MobileNumber:<input type="number" name="MobileNumber" value="{{data.MobileNumber}}"><br><br>
+        Gender:<input type="text" name="Gender" value="{{data.Gender}}"><br><br>
+        username:<input type="text" name="username" value="{{S_id.username}}"><br><br>
+        
+        <input type="submit" value="update">
+        
+            
+  
+    </form>
+</body>
+</html>
